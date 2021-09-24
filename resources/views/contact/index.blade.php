@@ -13,7 +13,11 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
+                    <a href="{{route('contact.create')}}" >
+                        <button type="submit" class="btn btn-primary">
+                            新規登録
+                        </button>
+                    </a>
                     indexです
                 </div>
             </div>
