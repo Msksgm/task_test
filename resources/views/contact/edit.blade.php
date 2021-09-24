@@ -15,13 +15,7 @@
                     @endif
 
                     editです
-                    {{ $contact->your_name }}
-                    {{ $contact->title }}
-                    {{ $contact->email }}
-                    {{ $contact->gender }}
-                    {{ $contact->age }}
-                    {{ $contact->url }}
-                    <form method="POST" action="{{ route('contact.edit', ['id' => $contact->id]) }}">
+                    <form method="POST" action="{{ route('contact.update', ['id' => $contact->id ]) }}">
                     @csrf
 
                     氏名
