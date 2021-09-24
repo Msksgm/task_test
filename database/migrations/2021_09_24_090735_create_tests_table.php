@@ -13,9 +13,9 @@ class CreateTestsTable extends Migration
      */
     public function up()
     {
-        Schema::create('tests_', function (Blueprint $table) {
+        Schema::create('tests', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string("text", 100);
+            $table->string('text', 100);
             $table->timestamps();
         });
     }
@@ -27,6 +27,6 @@ class CreateTestsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tests_');
+        Schema::dropIfExists('tests');
     }
 }
