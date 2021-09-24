@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\ContactForm;
 use Illuminate\Support\Facades\DB;
+use App\Services\CheckFormData;
 
 class ContactFormController extends Controller
 {
@@ -71,7 +72,12 @@ class ContactFormController extends Controller
     {
         //
         $contact = ContactForm::find($id);
-        return view('contact.show', compact('contact'));
+
+        $gender = CheckFormData::checkGender($contact);
+
+        $age = CheckFormData::checkAge($contact);
+
+        return view('contact.show', compact('contact', 'gender', 'age'));
     }
 
     /**

@@ -18,8 +18,8 @@
                     {{ $contact->your_name }}
                     {{ $contact->title }}
                     {{ $contact->email }}
-                    {{ $contact->gender }}
-                    {{ $contact->age }}
+                    {{ $gender }}
+                    {{ $age }}
                     {{ $contact->url }}
 
                     <form method="GET" action="{{ route('contact.edit', ['id' => $contact->id ])}}">
