@@ -18,4 +18,7 @@ Route::get('/', function () {
 Route::get('tests/test', 'TestController@index');
 Auth::routes();
 
+// REST
+// Route::resource('contact', 'ContactFormController');
+
 Route::get('/home', 'HomeController@index')->name('home');
